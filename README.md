@@ -11,3 +11,5 @@ You will notice that the password is not actually printed out, this is a securit
 - Run `chmod u+x run.sh`
 - Run `sh ./run.sh <integer>` whereby the integer is a number between 6 and 30 (exclusive) specifying the length of the password
 - Paste the password
+
+You could also make it an alias in your command line. For example, if you're using `zsh`, you could run `alias -g [alias-name]="/path/to/project/run.sh"`. Then you type `[alias-name] 14`.
