@@ -1,6 +1,6 @@
 # Introduction
 This is a simple project that aims at allowing the user to create and copy a complex password at ease, instead of having to go through the process of google > website > button to generate > double click on field to select all > 2 buttons to copy.
-I understand that it is a seemless operation, but for me, I find it quite disruptive.
+I understand that it is a seamless operation, but for me, I find it quite disruptive.
 I also understand that there are many packages that do just that, but I wanted to learn bash all the while.
 Feel free to collaborate as you wish! 🙂
 
