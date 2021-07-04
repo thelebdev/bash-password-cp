@@ -24,6 +24,14 @@ function VALIDATE_CONFIRMATION {
     fi
 }
 
+if [ -z $PASSWORD_LENGTH ]
+then
+    PASSWORD_LENGTH=14
+    echo "Generating password of length ${PASSWORD_LENGTH} (default)"
+else
+    echo "Generating password of length ${PASSWORD_LENGTH} (custom)"
+fi
+
 
 if [ $PASSWORD_LENGTH -lt 6 ]
 then
@@ -35,14 +43,6 @@ if [ $PASSWORD_LENGTH -gt 30 ]
 then
     echo "You are generating a very long password ($PASSWORD_LENGTH characters). Are you sure you want to continue? (y/n)"
     VALIDATE_CONFIRMATION
-fi
-
-if [ -z $PASSWORD_LENGTH ]
-then
-    PASSWORD_LENGTH=14
-    echo "Generating password of length ${PASSWORD_LENGTH} (default)"
-else
-    echo "Generating password of length ${PASSWORD_LENGTH} (custom)"
 fi
 
 PASSWORD=""
