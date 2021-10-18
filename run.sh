@@ -17,7 +17,8 @@ PASSWORD_LENGTH=$1
 ###
 function VALIDATE_CONFIRMATION {
     read CONFIRMATION
-    if [[ $CONFIRMATION != "y" ]] || [[ $CONFIRMATION != "Y" ]]
+    echo $CONFIRMATION
+    if [[ $CONFIRMATION != "y" ]] && [[ $CONFIRMATION != "Y" ]]
     then
         echo "Aborting..."
         exit 1
@@ -45,10 +46,12 @@ then
     VALIDATE_CONFIRMATION
 fi
 
+
 PASSWORD=""
 
 for (( c=0; c<$PASSWORD_LENGTH; c++ ))
 do
 	PASSWORD=$PASSWORD${DICTIONARY[$RANDOM % ${#DICTIONARY[@]}]}
 done
+echo "Password copied in your clipboard"
 echo $PASSWORD | pbcopy
